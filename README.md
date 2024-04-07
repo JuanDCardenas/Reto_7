@@ -67,7 +67,7 @@ flowchart TD
 >Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 
 ```python
-i=int(input("Escribe un numero entero: ")) #Inicializa y compila una variable "i" desde la consola
+i=int(input("Escribe un numero entero: ")) #Inicializa y declara una variable "i" desde la consola
 while (i>=2): #Se defiinen las condiciones del bucle (Que i sea mayor o igual a 2)
     if i%2 == 0: #Condicion que limita los numeros que aparecen a solo los pares
         print (i) # imprime el numero
@@ -87,13 +87,13 @@ flowchart TD
     F --> |no| L(Fin)
 ```
 >### Punto 4.
+>En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18.9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a la de A.
 
 ```python
-i=1
-e=1
-pais_a: int= 25000000
-pais_b: int= 19800000
-while (pais_b<=pais_a):
+i=1 # Se inicializa la variable i con valor 1
+pais_a: int= 25000000 #Se define el valor inicial de la variable "pais_a" con valor 25000000
+pais_b: int= 19800000 #Se define el valor inicial de la variable "pais_b" con valor 19800000
+while (pais_b<=pais_a): #
     pais_a+=pais_a*0.02
     pais_b+=pais_b*0.03
     i+=1
