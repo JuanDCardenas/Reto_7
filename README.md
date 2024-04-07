@@ -15,6 +15,17 @@ while (i<=100): #Define las condiciones del bucle (hasta que i=100)
     print(i**2) # imprime en consola i al cuadrado
     i+=1 # Adiciona uno a i cada que se inicia el bucle
 ```
+#### Diagrama de flujo:
+```mermaid
+flowchart TD
+    A(Inicio) --> B[i=1]
+    B -->F{Si i <= 100}
+    F -->|si| G[EImprimir i al cuadrado]
+    F --> |no|L(Fin)
+    G -->J[Sumar 1 a i 'i+=1' ]
+    J -->F
+    
+```
 >### Punto 2.
 ```python
 print ("Estos son los impares: ")
