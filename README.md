@@ -20,27 +20,49 @@ while (i<=100): #Define las condiciones del bucle (hasta que i=100)
 flowchart TD
     A(Inicio) --> B[i=1]
     B -->F{Si i <= 100}
-    F -->|si| G[EImprimir i al cuadrado]
+    F -->|si| G[Imprimir i al cuadrado]
     F --> |no|L(Fin)
     G -->J[Sumar 1 a i 'i+=1' ]
     J -->F
     
 ```
 >### Punto 2.
+>Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
+
 ```python
-print ("Estos son los impares: ")
-i=1
-e=1
-while (i<=999):
-    if i%2 != 0:
-        print(i)
-    i+=1
+print ("Estos son los impares: ") 
+i=1 # Se declara la variable usada para los numeros impares
+e=1 # Se declara la variable usada para los numeros pares
+while (i<=999): #Se defiinen las condiciones del bucle (Que i sea menor o igual a 999)
+    if i%2 != 0: #Condicion que limita los numeros que aparecen a solo los impares
+        print(i #Imprime el numero corespondiente
+    i+=1 #Adiciona uno a i cada que se ejecute el bucle
 print ("Estos son los pares: ")
-while (e<=1000):
-    if e%2 == 0:
-        print (e)
-    e+=1
+while (e<=1000): #Se defiinen las condiciones del bucle (Que e sea menor o igual a 1000)
+    if e%2 == 0: #Condicion que limita los numeros que aparecen a solo los pares
+        print (e) #Imprime el numero corespondiente
+    e+=1 #Adiciona uno a e cada que se ejecute el bucle
 ```
+Diagrama de flujo para este codigo:
+
+```mermaid
+flowchart TD
+    A(Inicio) --> B[i=1 y e=1]
+    B -->F{Si i <= 999}
+    F -->|si| G{i es impar}
+    G -->|si|J[Imprimir i]
+    J -->M[Sumar 1 a i   ''i+=1'' ]
+    M-->F
+    G-->|no|M
+    F --> |no|H{Si e <= 1000}
+        H-->|si| I{e es par}
+        I-->|si|N[imprimir e]
+        N-->K
+        I -->|no|K[Sumar 1 a i   ''i+=1'' ]
+        K-->H
+    H --> |no| L(Fin)
+```
+
 >### Punto 3.
 
 ```python
