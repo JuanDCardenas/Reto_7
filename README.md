@@ -64,15 +64,28 @@ flowchart TD
 ```
 
 >### Punto 3.
+>Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 
 ```python
-i=int(input("Escribe un numero entero: "))
-while (i>=2):
-    if i%2 == 0:
-        print (i)
-    i-=1
+i=int(input("Escribe un numero entero: ")) #Inicializa y compila una variable "i" desde la consola
+while (i>=2): #Se defiinen las condiciones del bucle (Que i sea mayor o igual a 2)
+    if i%2 == 0: #Condicion que limita los numeros que aparecen a solo los pares
+        print (i) # imprime el numero
+    i-=1 #Resta uno a i cada que se ejecuta el codigo
 ```
+Diagrama de flujo de este punto:
 
+```mermaid
+flowchart TD
+    A(Inicio) --> B[i = numero digitado en la consola]
+    B -->F{Si i >= 2}
+    F -->|si| G{i es par}
+    G -->|si|J[Imprimir i]
+    G -->|no|M
+    J -->M[Restar 1 a i   ''i-=1'' ]
+    M -->F
+    F --> |no| L(Fin)
+```
 >### Punto 4.
 
 ```python
