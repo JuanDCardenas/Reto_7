@@ -148,5 +148,23 @@ while (guardar>0): #Se definen las condiciones del bucle (Que guardar sea mayor 
 >Implementar el algoritmo que muestre los números primos del 1 al 100. Nota: use funciones
 
 ```python
+def numeros_primos (numero:int)->bool: #Se crea una funcion con un parametro entero que devuelve un booleano
+    j=2 #Se inicializa una variable con valor dos que servira como divisor
+    if numero==1: #Condiciona el resultado a ser falso cuando el valor es uno
+        return False
+    if numero==2 : #Condiciona el resultado a ser verdadero cuando el valor es dos
+        return True
+    while (j<numero): #Se definen las condiciones del bucle (Que j sea menor a numero)
+        if numero%j==0: #Condiciona el resultado a ser falsa cuando el valor tiene un divisor
+            return False
+        j+=1 #Adiciona uno a j cada que se ejecuta el ciclo.
+    return True   #Si no se cumple la condicion del loop se devuelve como verdadero
 
+if __name__ == "__main__": #Comprueba si el script se está ejecutando como main
+    numero:int=1: #Se inicializa numero con valor 1
+    while (numero<=100): #Se definen las condiciones del bucle (Que numero sea menor a 100)
+        primo=numeros_primos(numero) #Se llama a la funcion numeros_primos y se guarda en la variable "primo"
+        if primo==True: # Si primo es verdadero, o sea es primo se imprime en consola
+            print(numero)
+        numero+=1 #Se añade uno a "numero" cada que se ejecuta el loop
 ```
